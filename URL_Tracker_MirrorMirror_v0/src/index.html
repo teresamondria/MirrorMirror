@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		.heading {
+			margin: 0;
+			font-size: 20px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.no-history {
+			text-align: center;
+			font-size: 16px;
+			margin-top: 10px;
+			font-weight: bold;
+			color: red;
+		}
+
+		.urlItem {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+
+		.delete {
+			cursor: pointer;
+			color: white;
+			background-color: red;
+			outline: none;
+			border: none;
+			padding: 5px 10px;
+		}
+
+		.url {
+			cursor: pointer;
+			font-size: 16px;
+			color: blue;
+			text-decoration: underline;
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.actions {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.action {
+			border: none;
+			outline: none;
+			border-radius: 5px;
+			padding: 5px 15px;
+			cursor: pointer;
+		}
+
+		.clear-action {
+			background-color: red;
+			color: white;
+		}
+
+		.export-action {
+			background-color: green;
+			color: white;
+		}
+
+		.disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+
+		.pagination {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-top: 10px;
+		}
+
+		.paginationTop {
+			text-align: center;
+		}
+
+		.pagination-actions {
+			display: flex;
+			justify-content: space-around;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="" style="width: 100%;">
+		<h3 class="heading">Browsing History</h3>
+		<div class="actions">
+			<button id="clearBtn" class="action clear-action">Clear</button>
+			<button id="exportTxtBtn" class="action export-action">Export as Text</button>
+			<button id="exportCsvBtn" class="action export-action">Export as CSV</button>
+		</div>
+		<hr />
+		<div id="urlList" style="width: 400px;">
+		</div>
+		<div class="pagination" id="pagination">
+		</div>
+	</div>
+
+	<script src='action.js'></script>
+
+</body>
+
+</html>
